@@ -1,0 +1,14 @@
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.csprojAssemblyReference.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.g.cs
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra_MarkupCompile.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra_MarkupCompile.lref
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.baml
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.g.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.Properties.Resources.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.csproj.GenerateResource.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.csproj.CoreCompileInputs.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.csproj.CopyComplete
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.dll
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\Maestra\obj\Debug\Maestra.pdb
+D:\Empresas\Sodexo\Siasoft\Library\Maestra.dll
+D:\Empresas\Sodexo\Siasoft\Library\Maestra.pdb

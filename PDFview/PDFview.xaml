@@ -1,0 +1,16 @@
+﻿<Window x:Class="SiasoftAppExt.PDFview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF" 
+            xmlns:skin="http://schemas.syncfusion.com/wpf"
+             xmlns:local="clr-namespace:SiasoftAppExt"
+             mc:Ignorable="d" 
+             Width="1000" Height="500" skin:SkinStorage.VisualStyle="Metro">
+
+    <Grid>
+        <Syncfusion:PdfViewerControl Name="pdfViewerControl1"/>
+    </Grid>
+    
+</Window>

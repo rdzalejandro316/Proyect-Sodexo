@@ -1,0 +1,114 @@
+﻿<Window x:Class="SiasoftAppExt.Politicas_Revelacion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:SiaSf="http://schemas.syncfusion.com/wpf"            
+             xmlns:local="clr-namespace:SiasoftAppExt"
+             mc:Ignorable="d" 
+             Width="1000" Height="500" SiaSf:SkinStorage.VisualStyle="Metro">
+    
+    <Window.Resources>
+        <Style TargetType="SiaSf:GridHeaderCellControl" x:Key="headerStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#bdc3c7"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Btn">
+            <Setter Property="Background" Value="DodgerBlue"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#373737">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Año : " Foreground="White" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            <SiaSf:ComboBoxAdv Grid.Column="1" Name="CB_year" Margin="5 10 5 10" DisplayMemberPath="BusinessAno" SelectedValuePath="BusinessAno" Width="200" HorizontalAlignment="Left" FlowDirection="LeftToRight" SelectionChanged="CB_year_SelectionChanged"/>
+
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <Button Name="BtnNew" Content="Nuevo" Style="{StaticResource Btn}" Click="BtnNew_Click"/>
+                <Button Name="BtnEdi" Content="Editar" Style="{StaticResource Btn}" Click="BtnEdi_Click"/>
+                <Button Name="BtnDel" Content="Eliminar" Style="{StaticResource Btn}" Click="BtnDel_Click"/>
+                <Button Name="BtnCopy" Content="Copiar Notas" Style="{StaticResource Btn}" Click="BtnCopy_Click"/>
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Grid.Row="1">
+            
+            <SiaSf:SfDataGrid x:Name="dataGridCxC" AllowResizingColumns="True" FrozenColumnCount="2" EnableDataVirtualization="True" AutoGenerateColumns="False" ShowGroupDropArea="False" AllowFiltering="True" Margin="5" FontSize="10" HeaderStyle="{StaticResource headerStyle}">
+                <SiaSf:SfDataGrid.Columns>
+                    <SiaSf:GridTextColumn MappingName="idrow" IsHidden="True"/>
+                    <SiaSf:GridTextColumn MappingName="revelacion" IsHidden="True"/>
+                    <SiaSf:GridTextColumn MappingName="politica" IsHidden="True"/>
+                    <SiaSf:GridTextColumn MappingName="proce" IsHidden="True"/>
+                    <SiaSf:GridTextColumn MappingName="tipn" IsHidden="True"/>
+                    <SiaSf:GridTextColumn MappingName="estado" IsHidden="True"/>
+                    
+                    <SiaSf:GridTextColumn HeaderText="Nota" MappingName="nota" Width="100" />
+                    <SiaSf:GridTextColumn HeaderText="Descripcion" MappingName="descrip" Width="300" />
+                    <SiaSf:GridTemplateColumn MappingName="politica" Width="100"  AllowFiltering="False">
+                        <SiaSf:GridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="BtnMemoPol" Click="BtnMemo_Click" Cursor="Hand" Background="DodgerBlue" Tag="politicaTag" />
+                            </DataTemplate>
+                        </SiaSf:GridTemplateColumn.CellTemplate>
+                    </SiaSf:GridTemplateColumn>
+                    <SiaSf:GridTemplateColumn MappingName="revelacion" Width="100"  AllowFiltering="False">
+                        <SiaSf:GridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="BtnMemoRev" Click="BtnMemo_Click" Cursor="Hand" Background="DodgerBlue"  Tag="revelacionTag"/>
+                            </DataTemplate>
+                        </SiaSf:GridTemplateColumn.CellTemplate>
+                    </SiaSf:GridTemplateColumn>
+                    <SiaSf:GridTemplateColumn MappingName="proce" Width="100"  AllowFiltering="False">
+                        <SiaSf:GridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="BtnMemoProce" Click="BtnMemo_Click" Cursor="Hand" Background="DodgerBlue" Tag="proceTag" />
+                            </DataTemplate>
+                        </SiaSf:GridTemplateColumn.CellTemplate>
+                    </SiaSf:GridTemplateColumn>
+                    <SiaSf:GridTextColumn HeaderText="Fecha Mod" MappingName="fecha" Width="100" />
+                    <SiaSf:GridTextColumn HeaderText="Tipo" MappingName="tipo" Width="100" />
+                    <SiaSf:GridTextColumn HeaderText="Estado" MappingName="est" Width="100" />
+                </SiaSf:SfDataGrid.Columns>
+            </SiaSf:SfDataGrid>
+        </Grid>
+
+
+
+        <Grid Grid.Row="2" Background="#373737">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <TextBlock Text="Total : " Foreground="White" VerticalAlignment="Center" FontWeight="Bold" Margin="10 0 0 0"/>
+            <TextBlock Name="TX_total" Grid.Column="1" Foreground="White" VerticalAlignment="Center"/>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

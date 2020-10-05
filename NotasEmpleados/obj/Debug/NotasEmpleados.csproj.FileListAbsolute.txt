@@ -1,0 +1,15 @@
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.csprojAssemblyReference.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotaAdd.g.cs
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.g.cs
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados_MarkupCompile.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados_MarkupCompile.lref
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotaAdd.baml
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.baml
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.g.resources
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.Properties.Resources.resources
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.csproj.GenerateResource.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.csproj.CopyComplete
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.dll
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\NotasEmpleados\obj\Debug\NotasEmpleados.pdb
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\NotasEmpleados.dll
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\NotasEmpleados.pdb

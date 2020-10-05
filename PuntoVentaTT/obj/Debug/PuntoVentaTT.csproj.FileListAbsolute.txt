@@ -1,0 +1,14 @@
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.g.cs
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT_MarkupCompile.cache
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT_MarkupCompile.lref
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.baml
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.g.resources
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.Properties.Resources.resources
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.csproj.GenerateResource.cache
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.dll
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.pdb
+C:\Users\aleja\Desktop\sodexo\Library\PuntoVentaTT.dll
+C:\Users\aleja\Desktop\sodexo\Library\PuntoVentaTT.pdb
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\Dictionary.baml
+C:\Users\aleja\Desktop\sodexo\Library\projectGS\PuntoVentaTT\obj\Debug\PuntoVentaTT.csproj.CopyComplete

@@ -1,0 +1,175 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SiasoftAppExt">
+
+    <SolidColorBrush x:Key="ColorMain">#2196F3</SolidColorBrush>
+    <SolidColorBrush x:Key="ColorSecond">#FFF5F5F5</SolidColorBrush>
+    <SolidColorBrush x:Key="ColorTertiary">#03A9F4</SolidColorBrush>
+    <Style TargetType="Border" x:Key="card">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid x:Name="Grid">
+                        <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="2" 
+                                           Height="Auto" Fill="Transparent"/>
+                        <Border x:Name="Rectangle1" CornerRadius="10 0 0 10" HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" Width="Auto" Height="Auto" 
+                                        Background="{TemplateBinding Background}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Tag" Value="Horizontal">
+                            <Setter TargetName="Rectangle1" Property="Width" Value="2"/>
+                            <Setter TargetName="Rectangle1" Property="Height" Value="7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="GridRoot" Width="12" Background="{x:Null}">
+                        <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="False">
+                            <Track.Thumb>
+                                <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" 
+                                               Style="{DynamicResource ScrollThumbs}"/>
+                            </Track.Thumb>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="False"/>
+                            </Track.IncreaseRepeatButton>
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="False"/>
+                            </Track.DecreaseRepeatButton>
+                        </Track>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                            <Setter Value="{DynamicResource ButtonSelectBrush}" 
+                                            TargetName="Thumb" Property="Background"/>
+                        </Trigger>
+                        <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                            <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="Orientation" Value="Horizontal">
+                            <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Width" Value="Auto"/>
+                            <Setter Property="Height" Value="12"/>
+                            <Setter TargetName="Thumb" Property="Tag" Value="Horizontal"/>
+                            <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand"/>
+                            <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="Button" x:Key="BtnFiltro">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Margin" Value="5,0,5,0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Image Margin="5">
+                        <Image.Source>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <DrawingGroup ClipGeometry="M0,0 V479.998 H479.998 V0 H0 Z">
+                                        <DrawingGroup Opacity="1">
+                                            <DrawingGroup Opacity="1">
+                                                <DrawingGroup Opacity="1">
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M431.999,0L47.999,0C43.581,0,39.999,3.582,39.999,8L39.999,72 39.999,72.144C40.021,73.075 40.205,73.996 40.543,74.864 40.631,75.088 40.751,75.28 40.855,75.496 40.984,75.821 41.137,76.137 41.311,76.44L199.999,314.4 199.999,472C200,476.418 203.582,479.999 208.001,479.998 210.122,479.998 212.155,479.155 213.655,477.656L277.655,413.656C279.155,412.156,279.999,410.122,279.999,408L279.999,314.4 438.655,76.44C438.829,76.137 438.982,75.821 439.111,75.496 439.215,75.28 439.335,75.088 439.423,74.864 439.761,73.996 439.945,73.075 439.967,72.144 439.967,72.096 439.967,72.056 439.967,72L439.999,7.99999999999999C439.999,3.582,436.417,0,431.999,0z M263.999,404.688L215.999,452.688 215.999,320 263.999,320 263.999,404.688z M267.719,304L212.279,304 62.951,80 417.047,80 267.719,304z M423.999,64L55.999,64 55.999,16 423.999,16 423.999,64z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M239.999,56C244.417,56,247.999,52.418,247.999,48L247.999,32C247.999,27.582 244.417,24 239.999,24 235.581,24 231.999,27.582 231.999,32L231.999,48C231.999,52.418,235.581,56,239.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M271.999,56C276.417,56,279.999,52.418,279.999,48L279.999,32C279.999,27.582 276.417,24 271.999,24 267.581,24 263.999,27.582 263.999,32L263.999,48C263.999,52.418,267.581,56,271.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M303.999,56C308.417,56,311.999,52.418,311.999,48L311.999,32C311.999,27.582 308.417,24 303.999,24 299.581,24 295.999,27.582 295.999,32L295.999,48C295.999,52.418,299.581,56,303.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M335.999,56C340.417,56,343.999,52.418,343.999,48L343.999,32C343.999,27.582 340.417,24 335.999,24 331.581,24 327.999,27.582 327.999,32L327.999,48C327.999,52.418,331.581,56,335.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M367.999,56C372.417,56,375.999,52.418,375.999,48L375.999,32C375.999,27.582 372.417,24 367.999,24 363.581,24 359.999,27.582 359.999,32L359.999,48C359.999,52.418,363.581,56,367.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M399.999,56C404.417,56,407.999,52.418,407.999,48L407.999,32C407.999,27.582 404.417,24 399.999,24 395.581,24 391.999,27.582 391.999,32L391.999,48C391.999,52.418,395.581,56,399.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M207.999,56C212.417,56,215.999,52.418,215.999,48L215.999,32C215.999,27.582 212.417,24 207.999,24 203.581,24 199.999,27.582 199.999,32L199.999,48C199.999,52.418,203.581,56,207.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M175.999,56C180.417,56,183.999,52.418,183.999,48L183.999,32C183.999,27.582 180.417,24 175.999,24 171.581,24 167.999,27.582 167.999,32L167.999,48C167.999,52.418,171.581,56,175.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M143.999,56C148.417,56,151.999,52.418,151.999,48L151.999,32C151.999,27.582 148.417,24 143.999,24 139.581,24 135.999,27.582 135.999,32L135.999,48C135.999,52.418,139.581,56,143.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M111.999,56C116.417,56,119.999,52.418,119.999,48L119.999,32C119.999,27.582 116.417,24 111.999,24 107.581,24 103.999,27.582 103.999,32L103.999,48C103.999,52.418,107.581,56,111.999,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M479.998,479.998z M0,0z M79.999,56C84.417,56,87.999,52.418,87.999,48L87.999,32C87.999,27.582 84.417,24 79.999,24 75.581,24 71.999,27.582 71.999,32L71.999,48C71.999,52.418,75.581,56,79.999,56z" />
+                                                </DrawingGroup>
+                                            </DrawingGroup>
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </Image.Source>
+                    </Image>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="Button" x:Key="BtnCancelFiltro">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Margin" Value="5,0,5,0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Image Margin="5">
+                        <Image.Source>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <DrawingGroup ClipGeometry="M0,0 V480.19 H480.19 V0 H0 Z">
+                                        <DrawingGroup Opacity="1">
+                                            <DrawingGroup Opacity="1">
+                                                <DrawingGroup Opacity="1">
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M432.095,0L48.095,0C43.677,0,40.095,3.582,40.095,8L40.095,72 40.095,72.144C40.117,73.075 40.301,73.996 40.639,74.864 40.727,75.088 40.847,75.28 40.951,75.496 41.08,75.821 41.233,76.137 41.407,76.44L200.095,314.4 200.095,472C200.096,476.418 203.678,479.999 208.097,479.998 210.218,479.998 212.251,479.155 213.751,477.656L251.047,440.36C273.288,478.593 322.312,491.556 360.545,469.315 398.778,447.074 411.741,398.05 389.5,359.817 367.28,321.621 318.321,308.639 280.095,330.808L280.095,314.4 438.751,76.44C438.925,76.137 439.078,75.821 439.207,75.496 439.311,75.28 439.431,75.088 439.519,74.864 439.857,73.996 440.041,73.075 440.063,72.144 440.063,72.096 440.063,72.056 440.063,72L440.095,7.99999999999999C440.095,3.582,436.513,0,432.095,0z M252.327,357.744C251.671,358.792 251.007,359.824 250.407,360.896 249.663,362.208 249.007,363.56 248.343,364.896 247.815,365.976 247.263,367.04 246.743,368.144 246.127,369.56 245.607,371.016 245.071,372.472 244.671,373.568 244.231,374.64 243.879,375.752 243.383,377.296 242.999,378.88 242.607,380.456 242.335,381.52 242.015,382.56 241.807,383.656 241.439,385.424 241.199,387.224 240.951,389.016 240.823,389.936 240.631,390.832 240.535,391.752 240.244,394.492 240.097,397.245 240.095,400 240.095,402.4 240.223,404.752 240.431,407.096 240.495,407.856 240.607,408.6 240.695,409.352 240.887,410.952 241.103,412.552 241.383,414.152 241.535,415.008 241.711,415.856 241.895,416.704 242.215,418.192 242.575,419.667 242.975,421.128 243.207,421.928 243.423,422.776 243.679,423.592 243.807,423.992 243.895,424.392 244.023,424.8L216.095,452.688 216.095,320 264.095,320 264.095,342.928C263.487,343.52 262.951,344.184 262.367,344.8 261.487,345.712 260.615,346.632 259.783,347.584 258.807,348.704 257.895,349.856 256.983,351.024 256.183,352.016 255.447,352.992 254.727,354.016 253.871,355.232 253.127,356.48 252.327,357.744z M367.733,357.239C378.277,368.985 384.105,384.216 384.094,400 384.06,435.346 355.379,463.973 320.033,463.939 293.915,463.914 270.433,448.021 260.702,423.784 257.635,416.231 256.07,408.152 256.094,400 256.082,381.807 263.843,364.475 277.422,352.368 303.706,328.774 344.14,330.955 367.733,357.239z M267.815,304L212.375,304 63.047,80 417.143,80 267.815,304z M424.095,64L56.095,64 56.095,16 424.095,16 424.095,64z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M240.095,56C244.513,56,248.095,52.418,248.095,48L248.095,32C248.095,27.582 244.513,24 240.095,24 235.677,24 232.095,27.582 232.095,32L232.095,48C232.095,52.418,235.677,56,240.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M272.095,56C276.513,56,280.095,52.418,280.095,48L280.095,32C280.095,27.582 276.513,24 272.095,24 267.677,24 264.095,27.582 264.095,32L264.095,48C264.095,52.418,267.677,56,272.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M304.095,56C308.513,56,312.095,52.418,312.095,48L312.095,32C312.095,27.582 308.513,24 304.095,24 299.677,24 296.095,27.582 296.095,32L296.095,48C296.095,52.418,299.677,56,304.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M336.095,56C340.513,56,344.095,52.418,344.095,48L344.095,32C344.095,27.582 340.513,24 336.095,24 331.677,24 328.095,27.582 328.095,32L328.095,48C328.095,52.418,331.677,56,336.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M368.095,56C372.513,56,376.095,52.418,376.095,48L376.095,32C376.095,27.582 372.513,24 368.095,24 363.677,24 360.095,27.582 360.095,32L360.095,48C360.095,52.418,363.677,56,368.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M400.095,56C404.513,56,408.095,52.418,408.095,48L408.095,32C408.095,27.582 404.513,24 400.095,24 395.677,24 392.095,27.582 392.095,32L392.095,48C392.095,52.418,395.677,56,400.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M208.095,56C212.513,56,216.095,52.418,216.095,48L216.095,32C216.095,27.582 212.513,24 208.095,24 203.677,24 200.095,27.582 200.095,32L200.095,48C200.095,52.418,203.677,56,208.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M176.095,56C180.513,56,184.095,52.418,184.095,48L184.095,32C184.095,27.582 180.513,24 176.095,24 171.677,24 168.095,27.582 168.095,32L168.095,48C168.095,52.418,171.677,56,176.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M144.095,56C148.513,56,152.095,52.418,152.095,48L152.095,32C152.095,27.582 148.513,24 144.095,24 139.677,24 136.095,27.582 136.095,32L136.095,48C136.095,52.418,139.677,56,144.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M112.095,56C116.513,56,120.095,52.418,120.095,48L120.095,32C120.095,27.582 116.513,24 112.095,24 107.677,24 104.095,27.582 104.095,32L104.095,48C104.095,52.418,107.677,56,112.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M80.095,56C84.513,56,88.095,52.418,88.095,48L88.095,32C88.095,27.582 84.513,24 80.095,24 75.677,24 72.095,27.582 72.095,32L72.095,48C72.095,52.418,75.677,56,80.095,56z" />
+                                                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M480.19,480.19z M0,0z M280.495,439.6C283.619,442.723,288.683,442.723,291.807,439.6L320.095,411.312 348.383,439.6C351.561,442.67 356.625,442.582 359.695,439.404 362.69,436.304 362.69,431.388 359.695,428.288L331.407,400 359.695,371.712C362.765,368.534 362.677,363.47 359.499,360.4 356.399,357.405 351.483,357.405 348.383,360.4L320.095,388.688 291.807,360.4C288.629,357.33 283.565,357.418 280.495,360.596 277.5,363.696 277.5,368.612 280.495,371.712L308.783,400 280.495,428.288C277.372,431.412,277.372,436.476,280.495,439.6z" />
+                                                </DrawingGroup>
+                                            </DrawingGroup>
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </Image.Source>
+                    </Image>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

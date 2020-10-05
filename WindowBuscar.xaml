@@ -1,0 +1,34 @@
+﻿<Window x:Class="SiasoftApp.WindowBuscar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Buscar" Height="680" Width="750" ResizeMode="NoResize"  WindowStartupLocation="CenterOwner" ShowInTaskbar="False" KeyDown="Window_KeyDown" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid Margin="5,15"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox Margin="5,0,0,0" Name="TxtShear" Grid.Row="0"  Height="25" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewKeyDown="TxtShear_PreviewKeyDown" FontWeight="Bold" FontSize="15"/>
+            <Label BorderThickness="0" BorderBrush="White" Grid.Row="1" Margin="5,0,0,0" FontSize="12" VerticalAlignment="Top" Foreground="OrangeRed" Name="TxtTotal"   Height="25" Width="200" HorizontalAlignment="Left" />
+            <Button Margin="220,1,0,0" Name="BtnBuscar" Grid.Row="0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Buscar" Click="Button_Click_1" />
+            <DataGrid Name="dataGrid" Margin="1,8,1,-2" Grid.Row="2"  AutoGenerateColumns="False"    Background="White" RowBackground="White"
+AlternatingRowBackground="Azure" IsReadOnly="True" CanUserAddRows="True" SelectionUnit="FullRow"   CanUserDeleteRows="True"  HorizontalGridLinesBrush="LightGray"
+          VerticalGridLinesBrush="LightGray" HeadersVisibility="Column" SelectionMode="Single"  RowHeight="21" FontSize="12"  MouseDoubleClick="dataGrid_MouseDoubleClick" PreviewKeyDown="dataGrid_PreviewKeyDown"  >
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="Gray" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Height" Value="23"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    
+                    <DataGridTextColumn Header="Codigo" Binding="{Binding codigo}" Width="120"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="480" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.csprojAssemblyReference.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.g.cs
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery_MarkupCompile.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery_MarkupCompile.lref
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.baml
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.g.resources
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.Properties.Resources.resources
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.csproj.GenerateResource.cache
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.dll
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.pdb
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\Gallery.dll
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\Gallery.pdb
+C:\Users\aleja\Desktop\sodexo\Siasoft\Library\projectGS\Gallery\obj\Debug\Gallery.csproj.CopyComplete

@@ -1,0 +1,14 @@
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.csprojAssemblyReference.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.g.cs
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion_MarkupCompile.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion_MarkupCompile.lref
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.baml
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion.g.resources
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion.Properties.Resources.resources
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.csproj.GenerateResource.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.csproj.CoreCompileInputs.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\NIIF_Politicas_Revelacion.csproj.CopyComplete
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion.dll
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Politicas_Revelacion\obj\Debug\Politicas_Revelacion.pdb
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\Politicas_Revelacion.dll
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\Politicas_Revelacion.pdb

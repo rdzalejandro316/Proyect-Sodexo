@@ -1,0 +1,103 @@
+﻿<Window x:Class="SiasoftAppExt.ModelMaestra"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SiasoftAppExt"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sa="clr-namespace:SiasoftAppExt;assembly=ControlPanelMaestra"
+             Width="600" Height="400" Background="White">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Snackbar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <sa:control Tipo="1"/>
+
+        <!--<sa:ButtonX/>-->
+
+
+
+        <Grid Grid.Row="1">
+            <Border Margin="5" BorderBrush="Black" BorderThickness="0.8">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Text="letras del texbox">
+                        <materialDesign:HintAssist.Hint>
+                            <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                                <materialDesign:PackIcon Kind="Telephone" />
+                                <TextBlock Text="contro 1"/>
+                            </StackPanel>
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+
+                    <TextBox Grid.Row="1" Grid.Column="0" materialDesign:HintAssist.Hint="control texto normal" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="4"/>
+
+                    <TextBox Grid.Row="2" Grid.Column="0" materialDesign:HintAssist.Hint="control numero normal" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="4" PreviewKeyDown="TextBox_PreviewKeyDown"/>
+
+                    <ToggleButton  Grid.Row="3" Style="{StaticResource MaterialDesignSwitchToggleButton}"  ToolTip="Control Si o No"  IsChecked="True" />
+
+                    <CheckBox Grid.Row="4" Style="{StaticResource MaterialDesignCheckBox}" Content="Check" HorizontalAlignment="Center"/>
+
+                    <Button Grid.Row="5" ToolTip="Boton" Content="Button" Margin="5"/>
+
+
+                    <Slider Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Minimum="0"  Maximum="100"  Style="{StaticResource MaterialDesignDiscreteSlider}"  ToolTip="MaterialDesignDiscreteSlider"  Value="50"  Width="280" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                    <StackPanel Grid.Row="2" Grid.RowSpan="2"  Grid.Column="1" Grid.ColumnSpan="2" Margin="5">
+                        <TextBox    Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                        VerticalAlignment="Top"    AcceptsReturn="True"    TextWrapping="Wrap"    MaxWidth="400"    materialDesign:HintAssist.Hint="texto observacion"/>
+                    </StackPanel>
+
+                    <ComboBox Grid.Column="1" Grid.Row="4">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                    </ComboBox>
+                    
+                    <DatePicker Grid.Row="4" Grid.Column="2" Width="100"  materialDesign:HintAssist.Hint="Pick Date"  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+                    <GroupBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Header="aa">
+                        
+                    </GroupBox>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        
+
+
+
+    </Grid>
+        
+</Window>

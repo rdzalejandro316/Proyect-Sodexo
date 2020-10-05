@@ -1,0 +1,123 @@
+﻿<Window x:Class="Ctamea_vivienda.CtaConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"                 
+        xmlns:SiaSf="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:Ctamea_vivienda"
+        mc:Ignorable="d"
+        Title="CtaConfig" Height="450" Width="800" Background="WhiteSmoke">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Snackbar.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DialogHost.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Border" x:Key="card">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Margin="10">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Configuracion automatica de habitaciones" VerticalAlignment="Center" Foreground="#FF3F51B5" FontWeight="Bold" Margin="5 0 0 0"/>
+
+                <Grid Grid.Row="1" Width="400" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <CheckBox Tag="A"  Name="CHinicialHab" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" Content="Inicial Habitacion" IsChecked="False" Margin="5 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="CH_Checked" Unchecked="CH_Unchecked"/>
+                    
+                    <TextBox  Name="TxHab" MaxLength="2" Grid.Column="1" materialDesign:HintAssist.Hint="Inicial para las habitaciones"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center"  Margin="10 0 10 0"/>
+                    
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5 0 0">
+                        <Label Content="Cnt Aumento : " VerticalAlignment="Center" Margin="8 0 0 0" />
+                        <SiaSf:UpDown  Name="UDHab" MinValue="1" MaxValue="10" Width="40" AllowEdit="True" NumberDecimalDigits="0" VerticalAlignment="Center" FontSize="12" SiaSf:SkinStorage.VisualStyle="Blend" Height="25"/>
+                    </StackPanel>
+
+                    <CheckBox Name="CHestadoHab" Grid.Row="1" Grid.Column="1" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" Content="Estado Habitacion" IsChecked="True" Margin="5 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </Grid>
+              
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Margin="10">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Configuracion automatica de camas" VerticalAlignment="Center" Foreground="#FF3F51B5" FontWeight="Bold" Margin="5 0 0 0"/>
+
+                <Grid Grid.Row="1" Width="400" Height="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <CheckBox Tag="B" Name="CHinicialCam" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" Content="Inicial Cama" IsChecked="False" Margin="5 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <TextBox  Name="TxCam" MaxLength="2" Grid.Column="1" materialDesign:HintAssist.Hint="Inicial para las camas"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center"  Margin="10 0 10 0"/>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5 0 0">
+                        <Label Content="Cnt Aumento : " VerticalAlignment="Center" Margin="8 0 0 0" />
+                        <SiaSf:UpDown  Name="UDCam" MinValue="1"  Width="40" AllowEdit="True" NumberDecimalDigits="0" VerticalAlignment="Center" FontSize="12" SiaSf:SkinStorage.VisualStyle="Blend" Height="25"/>
+                    </StackPanel>
+
+                    <CheckBox Name="CHestadoCam" Grid.Row="1" Grid.Column="1" Style="{StaticResource MaterialDesignUserForegroundCheckBox}" Content="Estado Cama" IsChecked="True" Margin="5 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </Grid>
+
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="2" Margin="5">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Button Name="BtnUpdate" Content="Actualizar" Width="200" VerticalAlignment="Center" Click="BtnUpdate_Click"/>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,126 @@
+﻿<Window x:Class="HospedajePreCheckIn.Asignacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospedajePreCheckIn"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
+        mc:Ignorable="d"
+        Title="Asignacion" Height="450" Width="600" Loaded="Window_Loaded">
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Snackbar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Border" x:Key="borde">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Height" Value="Auto"/>
+                <Setter Property="BorderThickness" Value="1,1,1,1"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="Button" x:Key="search">
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border  Style="{StaticResource borde}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <TextBlock Text="Asignacion de Habitacion" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#03A9F4" Margin="5 0 0 0"/>
+                </Grid>
+
+
+                <Grid Margin="5" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1.1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1.2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ComboBox Name="Cbx_campa" Grid.Column="0" Margin="2" DisplayMemberPath="nombre" SelectedValuePath="codigo" SelectionChanged="Cbx_campa_SelectionChanged" materialDesign:HintAssist.Hint="Codigo Campamento" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="400" HorizontalAlignment="Left"/>
+                        <ComboBox Name="Cbx_vivienda" Grid.Column="1" Margin="2" DisplayMemberPath="nombre" SelectedValuePath="codigo" SelectionChanged="Cbx_vivienda_SelectionChanged" materialDesign:HintAssist.Hint="Codigo Vivienda" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="400" HorizontalAlignment="Left"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                       
+                        <ComboBox Name="Cbx_habitacion" Margin="2" DisplayMemberPath="nombre" SelectedValuePath="codigo" SelectionChanged="Cbx_habitacion_SelectionChanged" materialDesign:HintAssist.Hint="Codigo Habitacion" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                        <ComboBox Name="Cbx_cama"  Grid.Column="1" Margin="15 2 2 2" DisplayMemberPath="nombre" SelectedValuePath="codigo" materialDesign:HintAssist.Hint="Codigo Cama" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                    </Grid>
+
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                        <Button Tag="CtMae_Empleados" Click="BTNsearch_Click" Style="{StaticResource search}">
+                            <materialDesign:PackIcon Kind="Magnify" Foreground="#FF3F51B5"/>
+                        </Button>
+                        <TextBox  Name="Txempleado" materialDesign:HintAssist.Hint="Empleado" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="150" Margin="10 0 10 2" IsReadOnly="True"/>
+                        <TextBox  Name="Txcco" materialDesign:HintAssist.Hint="C costo" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="80" Margin="10 0 10 2" IsEnabled="False"/>
+                        <TextBox  Name="Txempresa" materialDesign:HintAssist.Hint="Empresa Codigo"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="100" Margin="10 0 10 2" IsEnabled="False"/>
+                    </StackPanel>
+
+                    <ComboBox Grid.Row="3" Grid.Column="1" Name="Cbx_Concepto" Margin="2" DisplayMemberPath="nombre" SelectedValuePath="codigo" materialDesign:HintAssist.Hint="Concepto" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="300" HorizontalAlignment="Left"/>
+
+                    <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+                        <DatePicker Name="TX_fecini" Width="150" Margin="2" materialDesign:HintAssist.Hint="Fecha Ingreso" Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
+                        <materialDesign:TimePicker  Name="TX_horaing" Width="150" Margin="10 2 2 2" materialDesign:HintAssist.Hint="Hora Ingreso" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" VerticalAlignment="Bottom" SelectedTimeFormat="Long" Is24Hours="True" WithSeconds="True"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                        <DatePicker Name="TX_fecsali" Width="150" Margin="2" materialDesign:HintAssist.Hint="Fecha Salida" Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
+                        <materialDesign:TimePicker  Name="TX_horsal" Width="150" Margin="10 2 2 2" materialDesign:HintAssist.Hint="Hora Salida" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" VerticalAlignment="Bottom" SelectedTimeFormat="Long" Is24Hours="True" WithSeconds="True"/>
+                    </StackPanel>
+                    
+
+                    <TextBox Name="TxNota" Grid.Row="6" Grid.Column="1" Margin="2" materialDesign:HintAssist.Hint="Nota" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                    <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Name="BtnSave" Content="Guardar" Width="100" Margin="2" Background="#03A9F4" Foreground="White" BorderBrush="{x:Null}" Cursor="Hand" Click="BtnSave_Click"/>
+                        <Button Name="BtnCancel" Content="Cancelar" Width="100" Margin="2" Background="#03A9F4" Foreground="White" BorderBrush="{x:Null}" Cursor="Hand" Click="BtnCancel_Click"/>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

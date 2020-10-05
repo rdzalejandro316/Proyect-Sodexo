@@ -1,0 +1,12 @@
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.csprojResolveAssemblyReference.cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.g.cs
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer_MarkupCompile.cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer_MarkupCompile.lref
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.baml
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.g.resources
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.Properties.Resources.resources
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.csproj.GenerateResource.Cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.dll
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\ReportViewer\obj\Debug\ReportViewer.pdb
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\ReportViewer.dll
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\ReportViewer.pdb

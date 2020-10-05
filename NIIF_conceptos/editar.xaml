@@ -1,0 +1,64 @@
+﻿<Window x:Class="NIIF_conceptos.editar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NIIF_conceptos"
+        xmlns:SiaSf="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        mc:Ignorable="d"
+        Title="editar" Height="250" Width="500" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" syncfusionskin:SfSkinManager.VisualStyle="Metro">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" BorderBrush="Silver" BorderThickness="1,1,1,1" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Codigo Concepto :" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Name="TXTcodigo" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#2980b9" Margin="5 0 0 0"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Nombre Concepto :" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="TXnombre" Margin="5" MaxLength="200" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Clase :" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold"/>
+                <SiaSf:ComboBoxAdv Grid.Row="2" Grid.Column="1" Name="CB_clase"  DisplayMemberPath="nom_clase" SelectedValuePath="clase" FlowDirection="LeftToRight" Margin="5" Width="200" HorizontalAlignment="Left" />
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Nota :" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold"/>
+                <Grid Grid.Row="3" Grid.Column="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Name="TX_nota" Grid.Column="0" Margin="5" Width="100" HorizontalAlignment="Left" x:FieldModifier="public"/>
+                    <Button Name="SearchAño" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Width="50" Height="30" HorizontalAlignment="Left" Click="SearchAño_Click" Cursor="Hand">
+                        <Image Source="imagenes/search.png"/>
+                    </Button>
+
+                </Grid>
+                
+
+                
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" Background="#373737">
+            <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Actualizar" Margin="5" BorderBrush="{x:Null}" Background="#3498db" Foreground="White" Cursor="Hand" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+
+</Window>

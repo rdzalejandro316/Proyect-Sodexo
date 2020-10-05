@@ -1,0 +1,14 @@
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.csprojAssemblyReference.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.g.cs
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu_MarkupCompile.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu_MarkupCompile.lref
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.baml
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.g.resources
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.Properties.Resources.resources
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.csproj.GenerateResource.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.csproj.CoreCompileInputs.cache
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.csproj.CopyComplete
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.dll
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\projectGS\NIIF_Menu\obj\Debug\NIIF_Menu.pdb
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\NIIF_Menu.dll
+C:\Users\aleja\OneDrive\Escritorio\SiasoftGS-Alejandro\SiasoftGS\Library\NIIF_Menu.pdb

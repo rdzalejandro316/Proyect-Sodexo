@@ -1,0 +1,64 @@
+﻿<Window x:Class="SiasoftAppExt.Gallery"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SiasoftAppExt"             
+             xmlns:SyncfusionPDF="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF" 
+             xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" 
+             mc:Ignorable="d" 
+             Width="1000" Height="500" Syncfusion:SkinStorage.VisualStyle="Office2013">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="nombre de archivo" Padding="10"/>
+                <TextBox Name="txnombre" Padding="10"/>
+                <TextBlock Text="tura de archivo" Padding="10"/>
+                <TextBox Name="txruta" Padding="10"/>
+                <Button Content="Buscar archivo" Padding="10" Click="Button_Click"/>
+                <Button Content="Subir archivo" Padding="10" Click="Button_Click_1"/>
+                <Button Content="Abrir Archivo" Padding="10" Click="Button_Click_2"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid Name="grilla" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="idrow" Width="100" Binding="{Binding Path=idrow}"/>
+                    <DataGridTextColumn Header="nombre" Width="150" Binding="{Binding Path=name_archive}"/>
+                    <DataGridTextColumn Header="ruta" Width="150" Binding="{Binding Path=realName}"/>
+                    <DataGridTextColumn Header="ruta" Width="150" Binding="{Binding Path=extension}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+
+            <Grid Name="gridPDF" Visibility="Hidden">
+                <SyncfusionPDF:PdfViewerControl Name="pdfViewerControl1"/> 
+            </Grid>
+                        
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.7*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+                <Syncfusion:SfRichTextRibbon x:Name="richTextRibbon" SnapsToDevicePixels="True"/>
+                <Syncfusion:SfRichTextBoxAdv x:Name="richTextBoxAdv" Background="#F1F1F1" Grid.Row="1" Visibility="Hidden"/>
+                <Syncfusion:SfSpreadsheet x:Name="spreadsheet" Grid.Row="1"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

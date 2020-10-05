@@ -1,0 +1,9 @@
+<FileList>
+<File Reference="Syncfusion.SfProgressBar.WPF.dll">
+	<ContainsControls>True</ContainsControls>
+	<ToolboxItems VSCategory="Syncfusion Controls for WPF" BlendCategory="Syncfusion Controls for WPF">
+		<Item Type="Syncfusion.UI.Xaml.ProgressBar.SfCircularProgressBar"/>
+		<Item Type="Syncfusion.UI.Xaml.ProgressBar.SfLinearProgressBar"/>
+	</ToolboxItems>
+</File>
+</FileList>

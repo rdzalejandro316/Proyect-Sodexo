@@ -1,0 +1,14 @@
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.csprojAssemblyReference.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.g.cs
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal_MarkupCompile.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal_MarkupCompile.lref
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.baml
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.g.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.Properties.Resources.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.csproj.GenerateResource.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.csproj.CoreCompileInputs.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.csproj.CopyComplete
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.dll
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\MenuPricipal\obj\Debug\MenuPricipal.pdb
+D:\Empresas\Sodexo\Siasoft\Library\MenuPricipal.dll
+D:\Empresas\Sodexo\Siasoft\Library\MenuPricipal.pdb

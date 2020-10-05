@@ -1,0 +1,15 @@
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\control.g.cs
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra_MarkupCompile.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra_MarkupCompile.lref
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\control.baml
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.g.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.Properties.Resources.resources
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.csproj.GenerateResource.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.csproj.CoreCompileInputs.cache
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.csproj.CopyComplete
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.dll
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ControlPanelMaestra.pdb
+D:\Empresas\Sodexo\Siasoft\Library\ControlPanelMaestra.dll
+D:\Empresas\Sodexo\Siasoft\Library\ControlPanelMaestra.pdb
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ButtonX.g.cs
+D:\Empresas\Sodexo\Siasoft\Library\projectGS\ControlPanelMaestra\obj\Debug\ButtonX.baml

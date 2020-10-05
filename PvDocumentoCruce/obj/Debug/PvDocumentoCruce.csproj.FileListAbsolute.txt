@@ -1,0 +1,12 @@
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.csprojResolveAssemblyReference.cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.g.cs
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce_MarkupCompile.cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce_MarkupCompile.lref
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.baml
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.g.resources
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.Properties.Resources.resources
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.csproj.GenerateResource.Cache
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.dll
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\projectGS\PvDocumentoCruce\obj\Debug\PvDocumentoCruce.pdb
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\PvDocumentoCruce.dll
+C:\Users\Grupo Saavedra\Desktop\SiasoftGS-alejo\Library\PvDocumentoCruce.pdb

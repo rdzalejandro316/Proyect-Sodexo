@@ -1,0 +1,186 @@
+﻿<Window x:Class="NIIF_conceptos.CreacionConceptos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:SiaSf="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        xmlns:local="clr-namespace:NIIF_conceptos"
+        mc:Ignorable="d"
+        Title="Creacion de Conceptos" Height="450" Width="600" Loaded="Window_Loaded" syncfusionskin:SfSkinManager.VisualStyle="Metro">
+
+    <Window.Resources>
+        <Style TargetType="SiaSf:GridHeaderCellControl" x:Key="headerStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#bdc3c7"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Background="#373737">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Informe : " Foreground="White" VerticalAlignment="Center" Margin="5 0 0 0" FontWeight="Bold" FontSize="14"/>
+                <TextBlock Name="TX_info" Foreground="White" VerticalAlignment="Center" Margin="5 0 0 0"/>
+            </StackPanel>
+        </Grid>
+
+        <Border Grid.Row="1" BorderBrush="Silver" BorderThickness="1,1,1,1" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Margin="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="White" Width="100" HorizontalAlignment="Left">
+                            <Border Background="LightGray">
+                                <Border.Effect>
+                                    <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+                                </Border.Effect>
+                            </Border>
+                            <TextBlock Text="Grupo" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,1,0,3"/>
+                        </Grid>
+                        
+                        <SiaSf:SfDataGrid Grid.Row="1" x:Name="dataGridGrupo" AllowResizingColumns="False" EnableDataVirtualization="True" AutoGenerateColumns="False" ShowGroupDropArea="False" AllowFiltering="True" FontSize="10" HeaderStyle="{StaticResource headerStyle}" Margin="0 5 0 0" SelectionChanged="DataGridGrupo_SelectionChanged" ColumnSizer="AutoWithLastColumnFill" VerticalAlignment="Top" CurrentCellBorderBrush="{x:Null}" >
+                            <SiaSf:SfDataGrid.Columns>
+                                <SiaSf:GridTextColumn HeaderText="Codigo" MappingName="grupo"/>
+                                <SiaSf:GridTextColumn HeaderText="Grupo" MappingName="nom_grupo"/>
+                            </SiaSf:SfDataGrid.Columns>
+                        </SiaSf:SfDataGrid>
+
+                    </Grid>
+
+                    <Grid Grid.Column="1" Margin="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="White" Width="100" HorizontalAlignment="Left">
+                            <Border Background="LightGray">
+                                <Border.Effect>
+                                    <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+                                </Border.Effect>
+                            </Border>
+                            <TextBlock Text="Tipos" TextAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        </Grid>
+
+                        <SiaSf:SfDataGrid Grid.Row="1" x:Name="dataGridTipos" AllowResizingColumns="False" EnableDataVirtualization="True" AutoGenerateColumns="False" ShowGroupDropArea="False" AllowFiltering="True" FontSize="10" HeaderStyle="{StaticResource headerStyle}" Margin="0 5 0 0" ColumnSizer="AutoWithLastColumnFill" VerticalAlignment="Top" CurrentCellBorderBrush="{x:Null}" SelectionChanged="DataGridTipos_SelectionChanged">
+                            <SiaSf:SfDataGrid.Columns>
+                                <SiaSf:GridTextColumn HeaderText="Codigo" MappingName="tipo" />
+                                <SiaSf:GridTextColumn HeaderText="Tipo" MappingName="nom_tipo"/>
+                            </SiaSf:SfDataGrid.Columns>
+                        </SiaSf:SfDataGrid>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <GroupBox Margin="5" Header="Conceptos" FontWeight="DemiBold">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="0.8*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.8*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.Resources>
+                                    <Style TargetType="TextBlock" x:Key="TX_title">
+                                        <Setter Property="VerticalAlignment" Value="Bottom"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="FontWeight" Value="Light"/>
+                                    </Style>
+                                    <Style TargetType="TextBox" x:Key="TX_value">
+                                        <Setter Property="Margin" Value="3"/>
+                                        <Setter Property="IsReadOnly" Value="True"/>
+                                        <Setter Property="Background" Value="LightGray"/>
+                                    </Style>
+                                </Grid.Resources>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Informe" Style="{StaticResource TX_title}"/>
+                                <TextBox Name="Tx_cod_inf" Grid.Row="1" Grid.Column="0" Style="{StaticResource TX_value}"/>
+
+                                <TextBlock Grid.Row="0" Grid.Column="1" Text="Grupo" Style="{StaticResource TX_title}"/>
+                                <TextBox Name="Tx_cod_grup" Grid.Row="1" Grid.Column="1" Style="{StaticResource TX_value}"/>
+                                
+                                <TextBlock Grid.Row="0" Grid.Column="2" Text="Tipo" Style="{StaticResource TX_title}"/>
+                                <TextBox Name="Tx_cod_tip" Grid.Row="1" Grid.Column="2" Style="{StaticResource TX_value}"/>
+                                
+                                <TextBlock Grid.Row="0" Grid.Column="3" Text="Orden" Style="{StaticResource TX_title}"/>
+                                <TextBox Name="Tx_cod_ord" Grid.Row="1" Grid.Column="3" Style="{StaticResource TX_value}"/>
+
+                                <TextBlock Grid.Row="0" Grid.Column="4" Text="Orden" Style="{StaticResource TX_title}"/>
+                                <TextBox Name="Tx_codigoCta" Grid.Row="1" Grid.Column="4" Style="{StaticResource TX_value}"/>
+                                
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.8*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Descripcion del concepto" VerticalAlignment="Center" FontWeight="Light" Margin="5 0 0 0"/>
+                                <TextBox Name="TXT_nameCon" Grid.Row="1" Margin="3"/>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.8*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Clase" VerticalAlignment="Center" FontWeight="Light" Margin="5 0 0 0"/>
+                                <SiaSf:ComboBoxAdv Grid.Row="1" Name="CB_clase"  DisplayMemberPath="nom_clase" SelectedValuePath="clase" FlowDirection="LeftToRight" Margin="2" Width="200" HorizontalAlignment="Left" />
+
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 10 0" >
+                                    <Button Name="BTNcrear" Content="Crear" Width="100" Height="30" Margin="3" Foreground="White" Background="DodgerBlue" BorderBrush="{x:Null}" Cursor="Hand" Click="BTNcrear_Click"/>
+                                    <Button Name="BTNcancelar" Content="Cancelar" Width="100" Height="30" Margin="3" Foreground="White" Background="DodgerBlue" BorderBrush="{x:Null}" Cursor="Hand" Click="BTNcancelar_Click"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+                
+            </Grid>
+        </Border>
+        
+    </Grid>
+
+</Window>

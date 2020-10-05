@@ -1,0 +1,114 @@
+﻿<Window x:Class="SiasoftAppExt.NIIF_conceptos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:SiaSf="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SiasoftAppExt"
+        mc:Ignorable="d"
+        Title="Informe y Conceptos NIIF" Height="600" Width="1200" SiaSf:SkinStorage.VisualStyle="Metro">
+
+    <Window.Resources>
+        <Style TargetType="SiaSf:GridHeaderCellControl" x:Key="headerStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#bdc3c7"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="White"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#373737" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Informe :" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="30 0 10 0" FontSize="14" FontWeight="Bold" Foreground="White" />
+
+            <SiaSf:ComboBoxAdv Grid.Column="1" Name="CB_Cod_inf" Margin="5 10 5 10" DisplayMemberPath="nom_inf" SelectedValuePath="cod_inf" DropDownClosed="CB_Cod_inf_DropDownClosed" FlowDirection="LeftToRight"/>
+
+            <Button Name="BTNaddConc" Content="Adicionar Concepto" Grid.Column="2" Margin="5" Width="200" BorderBrush="{x:Null}" Background="DodgerBlue" HorizontalAlignment="Left" Foreground="White" Cursor="Hand" Click="BTNaddConc_Click"/>
+
+            <Grid Grid.Column="3">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 10 0">
+                    <TextBlock Text="Año de Notas :" Foreground="WhiteSmoke" VerticalAlignment="Center"/>
+                    <SiaSf:ComboBoxAdv Grid.Column="1" Name="CB_year" Margin="5 10 5 10" DisplayMemberPath="BusinessAno" SelectedValuePath="BusinessAno" Width="100" HorizontalAlignment="Left" FlowDirection="LeftToRight"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Border Grid.Row="1" BorderBrush="Silver" BorderThickness="1,1,1,1" Margin="5">
+            <Grid>
+                <SiaSf:SfDataGrid x:Name="dataGridCxC" AllowResizingColumns="True" FrozenColumnCount="2" EnableDataVirtualization="True" AutoGenerateColumns="False" ShowGroupDropArea="True" AllowFiltering="True" Margin="5" FontSize="10" HeaderStyle="{StaticResource headerStyle}">
+                    <SiaSf:SfDataGrid.Columns>
+                        <SiaSf:GridTemplateColumn MappingName="Eliminar" Width="60"  AllowFiltering="False">
+                            <SiaSf:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="BtnDetalle" Click="BTNeliminar_Click" Cursor="Hand" Background="Red" >
+                                        <Image Source="imagenes/trash-2.png" />
+                                    </Button>
+                                </DataTemplate>
+                            </SiaSf:GridTemplateColumn.CellTemplate>
+                        </SiaSf:GridTemplateColumn>
+                        <SiaSf:GridTextColumn HeaderText="Codigo" MappingName="cod_niif" Width="100" />
+                        <SiaSf:GridTextColumn HeaderText="Concepto" MappingName="nom_con" Width="150" />
+                        <SiaSf:GridTextColumn HeaderText="Nota" MappingName="nota" Width="150"/>
+                        <SiaSf:GridTextColumn HeaderText="Grupo" MappingName="nom_grupo" Width="100" />
+                        <SiaSf:GridTextColumn HeaderText="Tipo" MappingName="nom_tipo" Width="100" />
+                        <SiaSf:GridTextColumn HeaderText="Clase" MappingName="nom_clase" Width="100" />
+                        <SiaSf:GridTemplateColumn MappingName="Editar" Width="80"  AllowFiltering="False">
+                            <SiaSf:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="BtnDetalle" Click="BTNeditar_Click" Cursor="Hand" Background="#3498db" >
+                                        <Image Source="imagenes/editar.png" />
+                                    </Button>
+                                </DataTemplate>
+                            </SiaSf:GridTemplateColumn.CellTemplate>
+                        </SiaSf:GridTemplateColumn>
+
+                        <SiaSf:GridTemplateColumn MappingName="Cuentas" Width="80"  AllowFiltering="False">
+                            <SiaSf:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="BtnCuentas" Click="BTNcuentas_Click" Background="#3498db" Cursor="Hand" >
+                                        <Image Source="imagenes/book.png" />
+                                    </Button>
+                                </DataTemplate>
+                            </SiaSf:GridTemplateColumn.CellTemplate>
+                        </SiaSf:GridTemplateColumn>
+
+                        <SiaSf:GridTemplateColumn MappingName="Notas" Width="80"  AllowFiltering="False">
+                            <SiaSf:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="BtnNotas" Click="BtnNotas_Click" Background="#3498db" Cursor="Hand" >
+                                        <Image Source="imagenes/sticky-note-o.png" />
+                                    </Button>
+                                </DataTemplate>
+                            </SiaSf:GridTemplateColumn.CellTemplate>
+                        </SiaSf:GridTemplateColumn>
+
+
+                    </SiaSf:SfDataGrid.Columns>
+                </SiaSf:SfDataGrid>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="2" Background="#373737">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Total Conceptos:" Foreground="White" FontWeight="Bold" Margin="10 0 0 0" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock Name="Total" Foreground="White" Margin="10 0 0 0" VerticalAlignment="Center" FontSize="12"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>
+
+    

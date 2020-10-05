@@ -1,0 +1,90 @@
+﻿<Window x:Class="NIIF_conceptos.Notas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NIIF_conceptos"
+        mc:Ignorable="d"
+        Title="Notas" Height="400" Width="800" Loaded="Window_Loaded">
+    
+    <Window.Resources>
+        <Style TargetType="Border" x:Key="card">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Direction="0" ShadowDepth="0.5" BlurRadius="5" Color="Black"/>
+                </Setter.Value>
+            </Setter>
+        </Style>    
+    </Window.Resources>
+    
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Margin="10">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid Background="Orange" Margin="0 0 50 0" >
+                        <TextBlock Text="Politica" Foreground="White" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="arial" FontSize="14"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="Tx_Politica" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="10" Foreground="Black" CharacterCasing="Upper" BorderBrush="Gray" Background="WhiteSmoke" IsEnabled="False" IsReadOnly="False"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Margin="10" Grid.Column="1">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid Background="Orange" Margin="0 0 50 0" >
+                        <TextBlock Text="Revelacion" Foreground="White" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="arial" FontSize="14"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="Tx_Revelacion" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="10" Foreground="Black" CharacterCasing="Upper" BorderBrush="Gray" Background="WhiteSmoke" IsEnabled="False" IsReadOnly="False"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Margin="10" Grid.Column="2">
+            <Border Style="{StaticResource card}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid Background="Orange" Margin="0 0 50 0" >
+                        <TextBlock Text="Proceso" Foreground="White" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="arial" FontSize="14"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBox x:Name="Tx_Proceso" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="10" Foreground="Black" CharacterCasing="Upper" BorderBrush="Gray" Background="WhiteSmoke" IsEnabled="False" IsReadOnly="False"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</Window>

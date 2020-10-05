@@ -1,0 +1,15 @@
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.csproj.ResolveComReference.cache
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.g.cs
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS_MarkupCompile.cache
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS_MarkupCompile.lref
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.baml
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.g.resources
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.Properties.Resources.resources
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.csproj.GenerateResource.cache
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.csproj.CoreCompileInputs.cache
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.csproj.CopyComplete
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.dll
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.pdb
+C:\SDA\SiasoftAppSDA\Library\ImpoXLS.dll
+C:\SDA\SiasoftAppSDA\Library\ImpoXLS.pdb
+C:\SDA\SiasoftAppSDA\Library\project\ImpoXLS\obj\Debug\ImpoXLS.csprojAssemblyReference.cache

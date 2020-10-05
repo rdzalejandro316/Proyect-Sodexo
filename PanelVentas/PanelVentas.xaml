@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="SiasoftAppExt.PanelVentas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SiasoftAppExt"
+             xmlns:WPF="clr-namespace:Microsoft.Toolkit.Win32.UI.Controls.WPF;assembly=Microsoft.Toolkit.Win32.UI.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000" Background="White" Loaded="UserControl_Loaded">
+    
+    <Grid >
+        <WPF:WebView x:Name="Navegador"/>
+    </Grid>
+    
+</UserControl>

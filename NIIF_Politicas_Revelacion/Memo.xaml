@@ -1,0 +1,38 @@
+﻿<Window x:Class="Politicas_Revelacion.Memo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Politicas_Revelacion"
+        mc:Ignorable="d"
+        Title="Memo" Height="400" Width="600" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Btn">
+            <Setter Property="Background" Value="DodgerBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <GroupBox Name="GB" Margin="5"  Foreground="orange" BorderBrush="#373737">
+            <Grid Margin="10 10 10 2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="TxObser" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="0 10 0 0" Foreground="Black" CharacterCasing="Upper"/>
+                
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Name="BtnSave" Content="Guardar" Style="{StaticResource Btn}" Click="BtnSave_Click"/>
+                    <Button Name="BtnCan" Content="Cancelar" Style="{StaticResource Btn}" Click="BtnCan_Click"/>
+                </StackPanel>                
+            </Grid>
+        </GroupBox>
+    </Grid>
+    
+</Window>

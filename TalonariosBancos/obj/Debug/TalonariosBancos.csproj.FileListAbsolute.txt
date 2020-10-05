@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.g.cs
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos_MarkupCompile.cache
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos_MarkupCompile.lref
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.baml
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.g.resources
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.Properties.Resources.resources
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.csproj.CopyComplete
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.dll
+C:\Users\USER\Desktop\SiasoftGS\Library\projectGS\TalonariosBancos\obj\Debug\TalonariosBancos.pdb
+C:\Users\USER\Desktop\SiasoftGS\Library\TalonariosBancos.dll
+C:\Users\USER\Desktop\SiasoftGS\Library\TalonariosBancos.pdb

@@ -1,0 +1,48 @@
+﻿<Window x:Class="Politicas_Revelacion.Año"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Politicas_Revelacion"
+        xmlns:SiaSf="http://schemas.syncfusion.com/wpf"            
+        mc:Ignorable="d"
+        Title="Año" Height="200" Width="400" Loaded="Window_Loaded" SiaSf:SkinStorage.VisualStyle="Metro">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Btn">
+            <Setter Property="Background" Value="DodgerBlue"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="Orange">
+            <TextBlock Text="Selecione el año" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <SiaSf:ComboBoxAdv Grid.Column="1" Name="CB_year" Margin="10 20 10 10 " DisplayMemberPath="BusinessAno" SelectedValuePath="BusinessAno" Width="250" HorizontalAlignment="Center" FlowDirection="LeftToRight"  x:FieldModifier="public"/>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Button Name="BTNCopy" Content="Copiar" Style="{StaticResource Btn}" Click="BTNCopy_Click"/>
+                <Button Name="BTNCancel" Content="Cancelar" Style="{StaticResource Btn}" Click="BTNCancel_Click"/>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+    
+</Window>
